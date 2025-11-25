@@ -1,0 +1,17 @@
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\bin\Debug\net9.0\WebApiSIA.Infrastructure.Persistence.deps.json
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\bin\Debug\net9.0\WebApiSIA.Infrastructure.Persistence.dll
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\bin\Debug\net9.0\WebApiSIA.Infrastructure.Persistence.pdb
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\bin\Debug\net9.0\WebApiSIA.Core.Application.dll
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\bin\Debug\net9.0\WebApiSIA.Core.Domain.dll
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\bin\Debug\net9.0\WebApiSIA.Core.Application.pdb
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\bin\Debug\net9.0\WebApiSIA.Core.Domain.pdb
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\obj\Debug\net9.0\WebApiSIA.Infrastructure.Persistence.csproj.AssemblyReference.cache
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\obj\Debug\net9.0\WebApiSIA.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\obj\Debug\net9.0\WebApiSIA.Infrastructure.Persistence.AssemblyInfoInputs.cache
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\obj\Debug\net9.0\WebApiSIA.Infrastructure.Persistence.AssemblyInfo.cs
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\obj\Debug\net9.0\WebApiSIA.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\obj\Debug\net9.0\WebApiSI.2F301B3D.Up2Date
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\obj\Debug\net9.0\WebApiSIA.Infrastructure.Persistence.dll
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\obj\Debug\net9.0\refint\WebApiSIA.Infrastructure.Persistence.dll
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\obj\Debug\net9.0\WebApiSIA.Infrastructure.Persistence.pdb
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Infrastructure.Persistence\obj\Debug\net9.0\ref\WebApiSIA.Infrastructure.Persistence.dll

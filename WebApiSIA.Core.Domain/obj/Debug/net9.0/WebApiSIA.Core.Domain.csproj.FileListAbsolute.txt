@@ -1,0 +1,11 @@
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\bin\Debug\net9.0\WebApiSIA.Core.Domain.deps.json
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\bin\Debug\net9.0\WebApiSIA.Core.Domain.dll
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\bin\Debug\net9.0\WebApiSIA.Core.Domain.pdb
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\obj\Debug\net9.0\WebApiSIA.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\obj\Debug\net9.0\WebApiSIA.Core.Domain.AssemblyInfoInputs.cache
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\obj\Debug\net9.0\WebApiSIA.Core.Domain.AssemblyInfo.cs
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\obj\Debug\net9.0\WebApiSIA.Core.Domain.csproj.CoreCompileInputs.cache
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\obj\Debug\net9.0\WebApiSIA.Core.Domain.dll
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\obj\Debug\net9.0\refint\WebApiSIA.Core.Domain.dll
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\obj\Debug\net9.0\WebApiSIA.Core.Domain.pdb
+E:\TRABAJO_PRO\WebApplication1\WebApiSIA.Core.Domain\obj\Debug\net9.0\ref\WebApiSIA.Core.Domain.dll

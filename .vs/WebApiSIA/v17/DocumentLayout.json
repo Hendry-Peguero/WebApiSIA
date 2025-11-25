@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\TRABAJO_PRO\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{55B61793-67F4-4701-B10A-22E03DF060BB}|WebApplication1\\WebApiSIA.csproj|e:\\trabajo_pro\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55B61793-67F4-4701-B10A-22E03DF060BB}|WebApplication1\\WebApiSIA.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55B61793-67F4-4701-B10A-22E03DF060BB}|WebApplication1\\WebApiSIA.csproj|e:\\trabajo_pro\\webapplication1\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55B61793-67F4-4701-B10A-22E03DF060BB}|WebApplication1\\WebApiSIA.csproj|solutionrelative:webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8FA8E7C-8D02-4C9D-A765-975DBCDB523A}|WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj|e:\\trabajo_pro\\webapplication1\\webapisia.infrastructure.persistence\\dependencyinjection\\dependencyinjectionpersistencelayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8FA8E7C-8D02-4C9D-A765-975DBCDB523A}|WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj|solutionrelative:webapisia.infrastructure.persistence\\dependencyinjection\\dependencyinjectionpersistencelayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8FA8E7C-8D02-4C9D-A765-975DBCDB523A}|WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj|e:\\trabajo_pro\\webapplication1\\webapisia.infrastructure.persistence\\contexts\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8FA8E7C-8D02-4C9D-A765-975DBCDB523A}|WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj|solutionrelative:webapisia.infrastructure.persistence\\contexts\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55B61793-67F4-4701-B10A-22E03DF060BB}|WebApplication1\\WebApiSIA.csproj|e:\\trabajo_pro\\webapplication1\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{55B61793-67F4-4701-B10A-22E03DF060BB}|WebApplication1\\WebApiSIA.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB813BF-C295-4896-B1F6-8B28A3AAE4CC}|WebApiSIA.Core.Domain\\WebApiSIA.Core.Domain.csproj|e:\\trabajo_pro\\webapplication1\\webapisia.core.domain\\entities\\inventorymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FB813BF-C295-4896-B1F6-8B28A3AAE4CC}|WebApiSIA.Core.Domain\\WebApiSIA.Core.Domain.csproj|solutionrelative:webapisia.core.domain\\entities\\inventorymovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8FA8E7C-8D02-4C9D-A765-975DBCDB523A}|WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj|e:\\trabajo_pro\\webapplication1\\webapisia.infrastructure.persistence\\webapisia.infrastructure.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E8FA8E7C-8D02-4C9D-A765-975DBCDB523A}|WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj|solutionrelative:webapisia.infrastructure.persistence\\webapisia.infrastructure.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55B61793-67F4-4701-B10A-22E03DF060BB}|WebApplication1\\WebApiSIA.csproj|e:\\trabajo_pro\\webapplication1\\webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{55B61793-67F4-4701-B10A-22E03DF060BB}|WebApplication1\\WebApiSIA.csproj|solutionrelative:webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8FA8E7C-8D02-4C9D-A765-975DBCDB523A}|WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj|e:\\trabajo_pro\\webapplication1\\webapisia.infrastructure.persistence\\repositories\\inventorymovementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8FA8E7C-8D02-4C9D-A765-975DBCDB523A}|WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj|solutionrelative:webapisia.infrastructure.persistence\\repositories\\inventorymovementrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB813BF-C295-4896-B1F6-8B28A3AAE4CC}|WebApiSIA.Core.Domain\\WebApiSIA.Core.Domain.csproj|e:\\trabajo_pro\\webapplication1\\webapisia.core.domain\\webapisia.core.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7FB813BF-C295-4896-B1F6-8B28A3AAE4CC}|WebApiSIA.Core.Domain\\WebApiSIA.Core.Domain.csproj|solutionrelative:webapisia.core.domain\\webapisia.core.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55B61793-67F4-4701-B10A-22E03DF060BB}|WebApplication1\\WebApiSIA.csproj|e:\\trabajo_pro\\webapplication1\\webapplication1\\webapisia.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{55B61793-67F4-4701-B10A-22E03DF060BB}|WebApplication1\\WebApiSIA.csproj|solutionrelative:webapplication1\\webapisia.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T04:29:34.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T03:00:22.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InventoryMovement.cs",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Core.Domain\\Entities\\InventoryMovement.cs",
+              "RelativeDocumentMoniker": "WebApiSIA.Core.Domain\\Entities\\InventoryMovement.cs",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Core.Domain\\Entities\\InventoryMovement.cs",
+              "RelativeToolTip": "WebApiSIA.Core.Domain\\Entities\\InventoryMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T03:10:29.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "WebApplication1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-25T03:00:53.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Infrastructure.Persistence\\Contexts\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "WebApiSIA.Infrastructure.Persistence\\Contexts\\ApplicationContext.cs",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Infrastructure.Persistence\\Contexts\\ApplicationContext.cs",
+              "RelativeToolTip": "WebApiSIA.Infrastructure.Persistence\\Contexts\\ApplicationContext.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T02:04:21.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DependencyInjectionPersistenceLayer.cs",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Infrastructure.Persistence\\DependencyInjection\\DependencyInjectionPersistenceLayer.cs",
+              "RelativeDocumentMoniker": "WebApiSIA.Infrastructure.Persistence\\DependencyInjection\\DependencyInjectionPersistenceLayer.cs",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Infrastructure.Persistence\\DependencyInjection\\DependencyInjectionPersistenceLayer.cs",
+              "RelativeToolTip": "WebApiSIA.Infrastructure.Persistence\\DependencyInjection\\DependencyInjectionPersistenceLayer.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwBAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T02:58:18.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WebApiSIA.Infrastructure.Persistence",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj",
+              "RelativeDocumentMoniker": "WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj",
+              "RelativeToolTip": "WebApiSIA.Infrastructure.Persistence\\WebApiSIA.Infrastructure.Persistence.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-25T04:31:53.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebApplication1\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-25T04:45:29.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InventoryMovementRepository.cs",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Infrastructure.Persistence\\Repositories\\InventoryMovementRepository.cs",
+              "RelativeDocumentMoniker": "WebApiSIA.Infrastructure.Persistence\\Repositories\\InventoryMovementRepository.cs",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Infrastructure.Persistence\\Repositories\\InventoryMovementRepository.cs",
+              "RelativeToolTip": "WebApiSIA.Infrastructure.Persistence\\Repositories\\InventoryMovementRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T04:32:10.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WebApiSIA.Core.Domain",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Core.Domain\\WebApiSIA.Core.Domain.csproj",
+              "RelativeDocumentMoniker": "WebApiSIA.Core.Domain\\WebApiSIA.Core.Domain.csproj",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApiSIA.Core.Domain\\WebApiSIA.Core.Domain.csproj",
+              "RelativeToolTip": "WebApiSIA.Core.Domain\\WebApiSIA.Core.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-25T03:10:08.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WebApiSIA.csproj",
+              "DocumentMoniker": "E:\\TRABAJO_PRO\\WebApplication1\\WebApplication1\\WebApiSIA.csproj",
+              "RelativeDocumentMoniker": "WebApplication1\\WebApiSIA.csproj",
+              "ToolTip": "E:\\TRABAJO_PRO\\WebApplication1\\WebApplication1\\WebApiSIA.csproj",
+              "RelativeToolTip": "WebApplication1\\WebApiSIA.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-25T01:59:09.32Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

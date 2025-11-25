@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "WebApiSIA.Controllers.InventoryMovementsController",
+    "Method": "Get",
+    "RelativePath": "api/InventoryMovements",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
