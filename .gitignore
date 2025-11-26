@@ -1,0 +1,13 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Carpetas de compilación
+**/bin/
+**/obj/
+
+# Otros generados
+*.pdb
+*.cache
+*.sourcelink.json

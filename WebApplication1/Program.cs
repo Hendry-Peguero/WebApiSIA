@@ -1,4 +1,5 @@
 using WebApiSIA.Infrastructure.Persistence.DependencyInjection;
+using WebApiSIA.Core.Application.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddSwaggerGen();
 
 // Tu capa de persistencia (donde registras ApplicationContext y el repo)
 builder.Services.AddPersistenceDependency(builder.Configuration);
+builder.Services.AddApplicationDependency();
 
 var app = builder.Build();
 

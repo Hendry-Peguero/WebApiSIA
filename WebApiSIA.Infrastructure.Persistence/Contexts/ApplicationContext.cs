@@ -8,14 +8,14 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
 
         // Aquí agregas la tabla
-        public DbSet<InventoryMovement> InventoryMovements { get; set; } = null!;
+        public DbSet<InventoryMovementEntity> InventoryMovements { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             // (Opcional, porque ya usamos DataAnnotations)
-            modelBuilder.Entity<InventoryMovement>(entity =>
+            modelBuilder.Entity<InventoryMovementEntity>(entity =>
             {
                 entity.ToTable("inventory_movements");
 

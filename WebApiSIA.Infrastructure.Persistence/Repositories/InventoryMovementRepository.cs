@@ -1,23 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using WebApiSIA.Core.Application.Interfaces.Repositories;
 using WebApiSIA.Core.Domain.Entities;
 using WebApiSIA.Infrastructure.Persistence.Contexts;
 
 namespace WebApiSIA.Infrastructure.Persistence.Repositories
 {
-    public class InventoryMovementRepository
+    public class InventoryMovementRepository : GenericRepository<InventoryMovementEntity>, IInventoryMovementRepository
     {
-        private readonly ApplicationContext _context;
+        private readonly ApplicationContext context;
 
-        public InventoryMovementRepository(ApplicationContext context)
+        public InventoryMovementRepository(ApplicationContext context) : base(context)
         {
-            _context = context;
-        }
-
-        public async Task<List<InventoryMovement>> GetAllAsync()
-        {
-            return await _context.InventoryMovements
-                .OrderByDescending(m => m.MovementDate)
-                .ToListAsync();
+            this.context = context;
         }
     }
 }

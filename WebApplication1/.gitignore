@@ -1,0 +1,93 @@
+########################
+# Archivos de usuario (IDE)
+########################
+.vs/
+.vscode/
+.idea/
+
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.userprefs
+*.sln.docstates
+
+########################
+# Build / compilación
+########################
+bin/
+obj/
+[Bb]uild/
+[Bb]uilds/
+artifacts/
+TestResults/
+[Aa]ppPackages/
+*.appx
+*.appxbundle
+*.appxupload
+
+########################
+# Logs y temporales
+########################
+*.log
+logs/
+*.tmp
+*.temp
+~$*
+*.bak
+
+########################
+# NuGet
+########################
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+.nuget/
+
+########################
+# Herramientas de análisis / plugins
+########################
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+.stylecop/
+*.svclog
+
+########################
+# Bases de datos locales
+########################
+*.mdf
+*.ldf
+*.ndf
+*.dbmdl
+
+########################
+# Publicación y deploy
+########################
+publish/
+*[Pp]ublishProfiles/
+*.pubxml
+*.pubxml.user
+
+########################
+# Node / Frontend (por si luego agregas React/Angular)
+########################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+.pnpm-debug.log*
+dist/
+build/
+
+########################
+# Configuración sensible / secretos
+########################
+secrets.json
+*.secret.json
+appsettings.Local.json
+appsettings.Secrets.json

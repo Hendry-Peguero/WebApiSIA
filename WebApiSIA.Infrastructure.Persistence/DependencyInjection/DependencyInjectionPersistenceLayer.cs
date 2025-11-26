@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebApiSIA.Core.Application.Interfaces.Repositories;
 using WebApiSIA.Infrastructure.Persistence.Contexts;
 using WebApiSIA.Infrastructure.Persistence.Repositories;
 
@@ -23,16 +24,8 @@ namespace WebApiSIA.Infrastructure.Persistence.DependencyInjection
 
 
             #region Repositories
-            services.AddScoped<InventoryMovementRepository>();
-            //services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            //services.AddTransient<IImprovementRepository, ImprovementRepository>();
-            //services.AddTransient<IPropertyRepository, PropertyRepository>();
-            //services.AddTransient<IPropertyFavoriteRepository, PropertyFavoriteRepository>();
-            //services.AddTransient<IPropertyImageRepository, PropertyImageRepository>();
-            //services.AddTransient<IPropertyImprovementRepository, PropertyImprovementRepository>();
-            //services.AddTransient<IPropertyTypeRepository, PropertyTypeRepository>();
-            //services.AddTransient<ISaleTypeRepository, SaleTypeRepository>();
-
+            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<IInventoryMovementRepository, InventoryMovementRepository>();
             #endregion
         }
     }
