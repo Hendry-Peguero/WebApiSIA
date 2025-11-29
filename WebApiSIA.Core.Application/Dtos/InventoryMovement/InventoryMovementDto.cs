@@ -1,5 +1,4 @@
-﻿
-namespace WebApiSIA.Core.Application.Dtos.InventoryMovement
+﻿namespace WebApiSIA.Core.Application.Dtos.InventoryMovement
 {
     public class InventoryMovementDto
     {

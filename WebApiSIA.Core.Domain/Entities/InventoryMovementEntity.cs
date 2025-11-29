@@ -3,12 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApiSIA.Core.Domain.Entities
 {
-    [Table("inventory_movements")] // nombre real de la tabla
     public class InventoryMovementEntity
     {
         [Key]
         [Column("Movement_ID")]
-        public int MovementId { get; set; }   // IDENTITY(1,1)
+        public int MovementId { get; set; } 
 
         [Column("ITEM_ID")]
         public int ItemId { get; set; }
@@ -19,7 +18,7 @@ namespace WebApiSIA.Core.Domain.Entities
         public string MovementType { get; set; } = null!;
 
         [Column("Quantity")]
-        public double Quantity { get; set; }   // float en SQL → double en C#
+        public double Quantity { get; set; }  
 
         [Column("Movement_Date")]
         public DateTime MovementDate { get; set; }

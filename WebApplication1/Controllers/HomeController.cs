@@ -6,7 +6,7 @@ using WebApiSIA.Core.Domain.Entities;
 namespace WebApiSIA.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")] 
+    [Route("api/[controller]")]
     public class InventoryMovementsController : ControllerBase
     {
         private readonly IGenericService<

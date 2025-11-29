@@ -7,14 +7,14 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
 
-        // Aquí agregas la tabla
         public DbSet<InventoryMovementEntity> InventoryMovements { get; set; } = null!;
+        public DbSet<ItemInformationEntity> ItemInformation { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // (Opcional, porque ya usamos DataAnnotations)
+            #region InventoryMovementEntity
             modelBuilder.Entity<InventoryMovementEntity>(entity =>
             {
                 entity.ToTable("inventory_movements");
@@ -46,6 +46,89 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                 entity.Property(e => e.CreatedBy)
                       .HasColumnName("CreatedBy");
             });
+            #endregion
+
+            #region ItemInformationEntity
+            modelBuilder.Entity<ItemInformationEntity>(entity =>
+            {
+                entity.ToTable("iteminformation");
+
+                entity.HasKey(e => e.ItemId)
+                      .HasName("iteminformation_PRIMARY");
+
+                entity.Property(e => e.ItemId)
+                      .HasColumnName("ITEM_ID")
+                      .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.ItemName)
+                      .HasColumnName("ItemName")
+                      .HasMaxLength(200);
+
+                entity.Property(e => e.UnitOfMeasure)
+                      .HasColumnName("UnitOfMeasure")
+                      .HasMaxLength(200);
+
+                entity.Property(e => e.Batch)
+                      .HasColumnName("Batch")
+                      .HasMaxLength(200);
+
+                entity.Property(e => e.GroupId)
+                      .HasColumnName("GROUP_ID");
+
+                entity.Property(e => e.Barcode)
+                      .HasColumnName("Barcode")
+                      .HasMaxLength(200);
+
+                // IMPORTANTE: Cost, Price, Price2, Price3 son float en la BD (double en C#)
+                entity.Property(e => e.Cost)
+                      .HasColumnName("Cost");
+
+                entity.Property(e => e.Price)
+                      .HasColumnName("Price");
+
+                entity.Property(e => e.Price2)
+                      .HasColumnName("Price2");
+
+                entity.Property(e => e.Price3)
+                      .HasColumnName("Price3");
+
+                entity.Property(e => e.ReorderPoint)
+                      .HasColumnName("ReorderPoint");
+
+                entity.Property(e => e.VatApplicable)
+                      .HasColumnName("VAT_Applicable")
+                      .HasMaxLength(10);
+
+                entity.Property(e => e.WarehouseId)
+                      .HasColumnName("WarehouseID");
+
+                entity.Property(e => e.PhotoFileName)
+                      .HasColumnName("PhotoFileName")
+                      .HasMaxLength(200);
+
+                entity.Property(e => e.Barcode2)
+                      .HasColumnName("Barcode2")
+                      .HasMaxLength(255);
+
+                entity.Property(e => e.Barcode3)
+                      .HasColumnName("Barcode3")
+                      .HasMaxLength(255);
+
+                entity.Property(e => e.Comment)
+                      .HasColumnName("comment");
+
+                entity.Property(e => e.VatId)
+                      .HasColumnName("VAT_ID");
+
+                entity.Property(e => e.AllowDecimal)
+                      .HasColumnName("AllowDecimal");
+
+                // Margen sí es decimal en la BD
+                entity.Property(e => e.Margen)
+                      .HasColumnName("Margen")
+                      .HasColumnType("decimal(5,2)");
+            });
+            #endregion
         }
     }
 }
