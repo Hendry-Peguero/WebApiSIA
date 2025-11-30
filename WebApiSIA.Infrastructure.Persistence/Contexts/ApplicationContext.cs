@@ -9,6 +9,7 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
 
         public DbSet<InventoryMovementEntity> InventoryMovements { get; set; } = null!;
         public DbSet<ItemInformationEntity> ItemInformation { get; set; } = null!;
+        public DbSet<UserEntity> Users { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -129,6 +130,55 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                       .HasColumnType("decimal(5,2)");
             });
             #endregion
+
+            #region UserEntity
+            modelBuilder.Entity<UserEntity>(entity =>
+            {
+                entity.ToTable("users");
+
+                entity.HasKey(e => e.UserId)
+                      .HasName("users_PRIMARY");
+
+                entity.Property(e => e.UserId)
+                      .HasColumnName("USER_ID")
+                      .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.FullName)
+                      .HasColumnName("FullName")
+                      .HasMaxLength(100);
+
+                entity.Property(e => e.UserName)
+                      .HasColumnName("UserName")
+                      .HasMaxLength(100);
+
+                entity.Property(e => e.Privilege)
+                      .HasColumnName("Privilege")
+                      .HasMaxLength(100);
+
+                entity.Property(e => e.RegDate)
+                      .HasColumnName("RegDate");
+
+                entity.Property(e => e.Password)
+                      .HasColumnName("Password");
+
+                entity.Property(e => e.CanAdd)
+                      .HasColumnName("Can_Add")
+                      .HasMaxLength(10);
+
+                entity.Property(e => e.CanEdit)
+                      .HasColumnName("Can_Edit")
+                      .HasMaxLength(10);
+
+                entity.Property(e => e.CanDelete)
+                      .HasColumnName("Can_Delete")
+                      .HasMaxLength(10);
+
+                entity.Property(e => e.CanPrint)
+                      .HasColumnName("Can_Print")
+                      .HasMaxLength(10);
+            });
+            #endregion
+
         }
     }
 }

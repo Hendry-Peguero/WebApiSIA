@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using WebApiSIA.Core.Application.Dtos.InventoryMovement;
 using WebApiSIA.Core.Application.Dtos.ItemInformation;
+using WebApiSIA.Core.Application.Dtos.User;
 using WebApiSIA.Core.Domain.Entities;
 
 namespace WebApiSIA.Core.Application.Mappings
@@ -37,6 +38,8 @@ namespace WebApiSIA.Core.Application.Mappings
 
             // Entity -> Entity (para copiar propiedades al actualizar)
             CreateMap<ItemInformationEntity, ItemInformationEntity>();
+
+            CreateMap<UserEntity, UserDto>();
         }
     }
 }

@@ -1,3 +1,6 @@
+﻿using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using WebApiSIA.Infrastructure.Persistence.DependencyInjection;
 using WebApiSIA.Core.Application.DependencyInjection;
 
@@ -10,19 +13,39 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Tu capa de persistencia (donde registras ApplicationContext y el repo)
+// Persistencia y aplicación
 builder.Services.AddPersistenceDependency(builder.Configuration);
 builder.Services.AddApplicationDependency();
 
+// 🔐 JWT
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
+            )
+        };
+    });
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
-// Swagger SIEMPRE activo mientras pruebas
+// Swagger
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// SIN redirecci�n a HTTPS por ahora
 // app.UseHttpsRedirection();
 
+app.UseAuthentication();   
 app.UseAuthorization();
 
 app.MapControllers();

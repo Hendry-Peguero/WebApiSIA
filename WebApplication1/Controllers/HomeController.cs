@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApiSIA.Core.Application.Dtos.InventoryMovement;
 using WebApiSIA.Core.Application.Interfaces.Services;
 using WebApiSIA.Core.Domain.Entities;

@@ -27,6 +27,7 @@ namespace WebApiSIA.Infrastructure.Persistence.DependencyInjection
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<IInventoryMovementRepository, InventoryMovementRepository>();
             services.AddTransient<IItemInformationRepository, ItemInformationRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
             #endregion
 
         }
