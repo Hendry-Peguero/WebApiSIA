@@ -49,10 +49,12 @@ namespace WebApiSIA.Core.Application.Services
 
             return new LoginResponseDto
             {
-                UserName = user.UserName ?? string.Empty,
-                Token = token
+                UserId = user.UserId,                       
+                UserName = user.UserName ?? string.Empty, 
+                Token = token                             
             };
         }
+
 
         private string GenerateJwtToken(UserEntity user)
         {
