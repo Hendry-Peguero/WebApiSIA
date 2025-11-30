@@ -140,7 +140,7 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                       .HasName("users_PRIMARY");
 
                 entity.Property(e => e.UserId)
-                      .HasColumnName("USER_ID")
+                      .HasColumnName("Id")
                       .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.FullName)
