@@ -29,18 +29,18 @@ namespace WebApiSIA.Core.Domain.Entities
 
         [MaxLength(10)]
         [Column("Can_Add")]
-        public string? CanAdd { get; set; }
+        public string? Can_Add { get; set; }
 
         [MaxLength(10)]
         [Column("Can_Edit")]
-        public string? CanEdit { get; set; }
+        public string? Can_Edit { get; set; }
 
         [MaxLength(10)]
         [Column("Can_Delete")]
-        public string? CanDelete { get; set; }
+        public string? Can_Delete { get; set; }
 
         [MaxLength(10)]
         [Column("Can_Print")]
-        public string? CanPrint { get; set; }
+        public string? Can_Print { get; set; }
     }
 }

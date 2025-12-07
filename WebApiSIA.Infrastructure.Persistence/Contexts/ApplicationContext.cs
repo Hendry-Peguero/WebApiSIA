@@ -21,17 +21,17 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
             {
                 entity.ToTable("inventory_movements");
 
-                entity.HasKey(e => e.MovementId)
+                entity.HasKey(e => e.Movement_ID)
                       .HasName("Movement_ID");
 
-                entity.Property(e => e.MovementId)
+                entity.Property(e => e.Movement_ID)
                       .HasColumnName("Movement_ID")
                       .ValueGeneratedOnAdd();
 
-                entity.Property(e => e.ItemId)
+                entity.Property(e => e.ITEM_ID)
                       .HasColumnName("ITEM_ID");
 
-                entity.Property(e => e.MovementType)
+                entity.Property(e => e.Movement_Type)
                       .HasColumnName("Movement_Type")
                       .HasMaxLength(15)
                       .IsRequired();
@@ -39,7 +39,7 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                 entity.Property(e => e.Quantity)
                       .HasColumnName("Quantity");
 
-                entity.Property(e => e.MovementDate)
+                entity.Property(e => e.Movement_Date)
                       .HasColumnName("Movement_Date");
 
                 entity.Property(e => e.Reason)
@@ -55,10 +55,10 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
             {
                 entity.ToTable("iteminformation");
 
-                entity.HasKey(e => e.ItemId)
-                      .HasName("iteminformation_PRIMARY");
+                entity.HasKey(e => e.ITEM_ID)
+                      .HasName("ITEM_ID");
 
-                entity.Property(e => e.ItemId)
+                entity.Property(e => e.ITEM_ID)
                       .HasColumnName("ITEM_ID")
                       .ValueGeneratedOnAdd();
 
@@ -74,14 +74,13 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                       .HasColumnName("Batch")
                       .HasMaxLength(200);
 
-                entity.Property(e => e.GroupId)
+                entity.Property(e => e.GROUP_ID)
                       .HasColumnName("GROUP_ID");
 
                 entity.Property(e => e.Barcode)
                       .HasColumnName("Barcode")
                       .HasMaxLength(200);
 
-                // IMPORTANTE: Cost, Price, Price2, Price3 son float en la BD (double en C#)
                 entity.Property(e => e.Cost)
                       .HasColumnName("Cost");
 
@@ -97,11 +96,11 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                 entity.Property(e => e.ReorderPoint)
                       .HasColumnName("ReorderPoint");
 
-                entity.Property(e => e.VatApplicable)
+                entity.Property(e => e.VAT_Applicable)
                       .HasColumnName("VAT_Applicable")
                       .HasMaxLength(10);
 
-                entity.Property(e => e.WarehouseId)
+                entity.Property(e => e.WarehouseID)
                       .HasColumnName("WarehouseID");
 
                 entity.Property(e => e.PhotoFileName)
@@ -119,13 +118,12 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                 entity.Property(e => e.Comment)
                       .HasColumnName("comment");
 
-                entity.Property(e => e.VatId)
+                entity.Property(e => e.VAT_ID)
                       .HasColumnName("VAT_ID");
 
                 entity.Property(e => e.AllowDecimal)
                       .HasColumnName("AllowDecimal");
 
-                // Margen sí es decimal en la BD
                 entity.Property(e => e.Margen)
                       .HasColumnName("Margen")
                       .HasColumnType("decimal(5,2)");
@@ -138,7 +136,7 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                 entity.ToTable("users");
 
                 entity.HasKey(e => e.USER_ID)
-                      .HasName("users_PRIMARY");
+                      .HasName("USER_ID");
 
                 entity.Property(e => e.USER_ID)
                       .HasColumnName("USER_ID")
@@ -162,19 +160,19 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                 entity.Property(e => e.Password)
                       .HasColumnName("Password");
 
-                entity.Property(e => e.CanAdd)
+                entity.Property(e => e.Can_Add)
                       .HasColumnName("Can_Add")
                       .HasMaxLength(10);
 
-                entity.Property(e => e.CanEdit)
+                entity.Property(e => e.Can_Edit)
                       .HasColumnName("Can_Edit")
                       .HasMaxLength(10);
 
-                entity.Property(e => e.CanDelete)
+                entity.Property(e => e.Can_Delete)
                       .HasColumnName("Can_Delete")
                       .HasMaxLength(10);
 
-                entity.Property(e => e.CanPrint)
+                entity.Property(e => e.Can_Print)
                       .HasColumnName("Can_Print")
                       .HasMaxLength(10);
             });

@@ -7,21 +7,21 @@ namespace WebApiSIA.Core.Domain.Entities
     {
         [Key]
         [Column("Movement_ID")]
-        public int MovementId { get; set; } 
+        public int Movement_ID { get; set; } 
 
         [Column("ITEM_ID")]
-        public int ItemId { get; set; }
+        public int ITEM_ID { get; set; }
 
         [Required]
         [MaxLength(15)]
         [Column("Movement_Type")]
-        public string MovementType { get; set; } = null!;
+        public string Movement_Type { get; set; } = null!;
 
         [Column("Quantity")]
         public double Quantity { get; set; }  
 
         [Column("Movement_Date")]
-        public DateTime MovementDate { get; set; }
+        public DateTime Movement_Date { get; set; }
 
         [Column("Reason")]
         public string? Reason { get; set; }

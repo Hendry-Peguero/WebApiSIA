@@ -49,7 +49,7 @@ namespace WebApiSIA.Core.Application.Services
 
             return new LoginResponseDto
             {
-                UserId = user.USER_ID,                       
+                USER_ID = user.USER_ID,                       
                 UserName = user.UserName ?? string.Empty, 
                 Token = token                             
             };

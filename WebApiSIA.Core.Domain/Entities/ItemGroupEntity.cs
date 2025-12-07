@@ -1,5 +1,4 @@
-﻿
-namespace WebApiSIA.Core.Domain.Entities
+﻿namespace WebApiSIA.Core.Domain.Entities
 {
     public class ItemGroupEntity
     {

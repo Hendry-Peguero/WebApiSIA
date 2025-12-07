@@ -21,10 +21,19 @@ namespace WebApiSIA.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<List<ItemGruopDto>>> Get()
         {
-            var data = await _service.GetAllAsync();
-            return Ok(data);
+            try
+            {
+                var data = await _service.GetAllAsync();
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new { message = "Error al obtener los grupos de ítems", error = ex.Message });
+            }
         }
     }
 }

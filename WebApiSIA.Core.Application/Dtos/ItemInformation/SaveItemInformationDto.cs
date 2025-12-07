@@ -13,7 +13,7 @@ namespace WebApiSIA.Core.Application.Dtos.ItemInformation
         [MaxLength(200, ErrorMessage = "El lote no puede exceder 200 caracteres")]
         public string? Batch { get; set; }
 
-        public int? GroupId { get; set; }
+        public int? GROUP_ID { get; set; }
 
         [MaxLength(200, ErrorMessage = "El código de barras no puede exceder 200 caracteres")]
         public string? Barcode { get; set; }
@@ -34,11 +34,10 @@ namespace WebApiSIA.Core.Application.Dtos.ItemInformation
         public double? ReorderPoint { get; set; }
 
         [MaxLength(10, ErrorMessage = "VAT Applicable no puede exceder 10 caracteres")]
-        public string? VatApplicable { get; set; }
+        public string? VAT_Applicable { get; set; }
 
-        public int? WarehouseId { get; set; }
+        public int? WarehouseID { get; set; }
 
-        [MaxLength(200, ErrorMessage = "El nombre del archivo de foto no puede exceder 200 caracteres")]
         public string? PhotoFileName { get; set; }
 
         [MaxLength(255, ErrorMessage = "El código de barras 2 no puede exceder 255 caracteres")]
@@ -49,7 +48,7 @@ namespace WebApiSIA.Core.Application.Dtos.ItemInformation
 
         public string? Comment { get; set; }
 
-        public int? VatId { get; set; }
+        public int? VAT_ID { get; set; }
 
         public bool? AllowDecimal { get; set; }
 

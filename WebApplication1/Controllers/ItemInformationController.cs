@@ -9,10 +9,15 @@ namespace WebApiSIA.Controllers
     [Route("api/[controller]")]
     public class ItemInformationController : ControllerBase
     {
-        private readonly IGenericService<SaveItemInformationDto, ItemInformationDto, ItemInformationEntity> _service;
+        private readonly IGenericService<
+            SaveItemInformationDto, 
+            ItemInformationDto, 
+            ItemInformationEntity> _service;
 
-        public ItemInformationController(
-            IGenericService<SaveItemInformationDto, ItemInformationDto, ItemInformationEntity> service)
+        public ItemInformationController(IGenericService<
+            SaveItemInformationDto, 
+            ItemInformationDto, 
+            ItemInformationEntity> service)
         {
             _service = service;
         }
@@ -35,7 +40,6 @@ namespace WebApiSIA.Controllers
 
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ItemInformationDto>> GetById(int id)
         {
             try
@@ -56,7 +60,6 @@ namespace WebApiSIA.Controllers
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<ItemInformationDto>> Create([FromBody] SaveItemInformationDto dto)
         {
             try
@@ -68,7 +71,7 @@ namespace WebApiSIA.Controllers
 
                 return CreatedAtAction(
                     nameof(GetById),
-                    new { id = createdItem.ItemId },
+                    new { id = createdItem.ITEM_ID },
                     createdItem);
             }
             catch (Exception ex)
@@ -80,8 +83,6 @@ namespace WebApiSIA.Controllers
 
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ItemInformationDto>> Update(int id, [FromBody] SaveItemInformationDto dto)
         {
             try
@@ -105,7 +106,6 @@ namespace WebApiSIA.Controllers
 
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult> Delete(int id)
         {
             try

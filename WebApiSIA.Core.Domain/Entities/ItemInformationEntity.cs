@@ -7,7 +7,7 @@ namespace WebApiSIA.Core.Domain.Entities
     {
         [Key]
         [Column("ITEM_ID")]
-        public int ItemId { get; set; }
+        public int ITEM_ID { get; set; }
 
         [MaxLength(200)]
         [Column("ItemName")]
@@ -22,7 +22,7 @@ namespace WebApiSIA.Core.Domain.Entities
         public string? Batch { get; set; }
 
         [Column("GROUP_ID")]
-        public int? GroupId { get; set; }
+        public int? GROUP_ID { get; set; }
 
         [MaxLength(200)]
         [Column("Barcode")]
@@ -45,10 +45,10 @@ namespace WebApiSIA.Core.Domain.Entities
 
         [MaxLength(10)]
         [Column("VAT_Applicable")]
-        public string? VatApplicable { get; set; }
+        public string? VAT_Applicable { get; set; }
 
         [Column("WarehouseID")]
-        public int? WarehouseId { get; set; }
+        public int? WarehouseID { get; set; }
 
         [MaxLength(200)]
         [Column("PhotoFileName")]
@@ -66,7 +66,7 @@ namespace WebApiSIA.Core.Domain.Entities
         public string? Comment { get; set; }
 
         [Column("VAT_ID")]
-        public int? VatId { get; set; }
+        public int? VAT_ID { get; set; }
 
         [Column("AllowDecimal")]
         public bool? AllowDecimal { get; set; }
