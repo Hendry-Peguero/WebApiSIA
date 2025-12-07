@@ -7,7 +7,7 @@ namespace WebApiSIA.Core.Domain.Entities
     {
         [Key]
         [Column("USER_ID")]
-        public int UserId { get; set; }
+        public int USER_ID { get; set; }
 
         [MaxLength(100)]
         [Column("FullName")]

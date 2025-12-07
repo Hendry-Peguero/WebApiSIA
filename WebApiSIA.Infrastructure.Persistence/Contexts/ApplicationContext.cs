@@ -10,7 +10,8 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
         public DbSet<InventoryMovementEntity> InventoryMovements { get; set; } = null!;
         public DbSet<ItemInformationEntity> ItemInformation { get; set; } = null!;
         public DbSet<UserEntity> Users { get; set; } = null!;
-
+        public DbSet<VatEntity> Vats { get; set; } = null!;
+        public DbSet<ItemGroupEntity> ItemGroups { get; set; } = null!;
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -21,7 +22,7 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                 entity.ToTable("inventory_movements");
 
                 entity.HasKey(e => e.MovementId)
-                      .HasName("PK_inventory_movements");
+                      .HasName("Movement_ID");
 
                 entity.Property(e => e.MovementId)
                       .HasColumnName("Movement_ID")
@@ -130,17 +131,17 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                       .HasColumnType("decimal(5,2)");
             });
             #endregion
-
+ 
             #region UserEntity
             modelBuilder.Entity<UserEntity>(entity =>
             {
                 entity.ToTable("users");
 
-                entity.HasKey(e => e.UserId)
+                entity.HasKey(e => e.USER_ID)
                       .HasName("users_PRIMARY");
 
-                entity.Property(e => e.UserId)
-                      .HasColumnName("Id")
+                entity.Property(e => e.USER_ID)
+                      .HasColumnName("USER_ID")
                       .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.FullName)
@@ -177,6 +178,26 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
                       .HasColumnName("Can_Print")
                       .HasMaxLength(10);
             });
+            #endregion
+
+            #region VatEntity
+            modelBuilder.Entity<VatEntity>(entity =>
+            {
+                entity.ToTable("vat");
+
+                entity.HasKey(e => e.ID)
+                    .HasName("ID");
+            });
+            #endregion
+
+            #region ItemGroup
+            modelBuilder.Entity<ItemGroupEntity>(entity =>
+            {
+                entity.ToTable("itemgruop");
+
+                entity.HasKey(e => e.GroupId)
+                    .HasName("GroupId");
+            }); 
             #endregion
 
         }

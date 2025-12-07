@@ -40,6 +40,7 @@ namespace WebApiSIA.Core.Application.Mappings
             CreateMap<ItemInformationEntity, ItemInformationEntity>();
 
             CreateMap<UserEntity, UserDto>();
+
         }
     }
 }

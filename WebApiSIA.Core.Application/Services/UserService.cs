@@ -49,7 +49,7 @@ namespace WebApiSIA.Core.Application.Services
 
             return new LoginResponseDto
             {
-                UserId = user.UserId,                       
+                UserId = user.USER_ID,                       
                 UserName = user.UserName ?? string.Empty, 
                 Token = token                             
             };
@@ -66,7 +66,7 @@ namespace WebApiSIA.Core.Application.Services
 
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.USER_ID.ToString()),
                 new Claim(ClaimTypes.Name, user.UserName ?? ""),
                 new Claim(ClaimTypes.Role, user.Privilege ?? "")
             };

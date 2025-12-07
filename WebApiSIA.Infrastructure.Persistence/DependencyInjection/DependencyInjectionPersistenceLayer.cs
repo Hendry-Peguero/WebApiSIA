@@ -28,6 +28,8 @@ namespace WebApiSIA.Infrastructure.Persistence.DependencyInjection
             services.AddTransient<IInventoryMovementRepository, InventoryMovementRepository>();
             services.AddTransient<IItemInformationRepository, ItemInformationRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IItemGroupRepository, ItemGroupRepository>();
+            services.AddTransient<IVatRespository, VatRespository>();
             #endregion
 
         }
