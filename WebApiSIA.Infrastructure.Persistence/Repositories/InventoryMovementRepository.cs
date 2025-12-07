@@ -6,11 +6,11 @@ namespace WebApiSIA.Infrastructure.Persistence.Repositories
 {
     public class InventoryMovementRepository : GenericRepository<InventoryMovementEntity>, IInventoryMovementRepository
     {
-        private readonly ApplicationContext context;
+        private readonly ApplicationContext _context;
 
         public InventoryMovementRepository(ApplicationContext context) : base(context)
         {
-            this.context = context;
+            _context = context;
         }
     }
 }

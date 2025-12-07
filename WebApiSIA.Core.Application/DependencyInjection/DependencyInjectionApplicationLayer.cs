@@ -18,6 +18,8 @@ namespace WebApiSIA.Core.Application.DependencyInjection
             services.AddAutoMapper(typeof(GeneralProfile).Assembly);
             services.AddTransient<IMd5Helper, Md5Helper>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IItemInformationService, ItemInformationService>();
+
             //services.AddTransient<IJsonHelper, JsonHelper>();
         }
     }

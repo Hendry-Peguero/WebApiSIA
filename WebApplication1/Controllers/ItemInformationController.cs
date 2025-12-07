@@ -10,17 +10,32 @@ namespace WebApiSIA.Controllers
     public class ItemInformationController : ControllerBase
     {
         private readonly IGenericService<
-            SaveItemInformationDto, 
-            ItemInformationDto, 
+            SaveItemInformationDto,
+            ItemInformationDto,
             ItemInformationEntity> _service;
+        private readonly IItemInformationService _itemInformationService;
 
         public ItemInformationController(IGenericService<
             SaveItemInformationDto, 
             ItemInformationDto, 
-            ItemInformationEntity> service)
+            ItemInformationEntity> service,
+            IItemInformationService itemInformationService)
         {
             _service = service;
+            _itemInformationService = itemInformationService;
         }
+
+        [HttpGet("barcode/{barcode}")]
+        public async Task<ActionResult<ItemInformationDto>> GetByBarcode(string barcode)
+        {
+            var result = await _itemInformationService.GetByBarcodeAsync(barcode);
+
+            if (result == null)
+                return NotFound(new { message = $"No existe artículo con Barcode '{barcode}'." });
+
+            return Ok(result);
+        }
+
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
