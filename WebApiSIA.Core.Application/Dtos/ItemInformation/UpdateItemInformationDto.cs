@@ -38,7 +38,7 @@ namespace WebApiSIA.Core.Application.Dtos.ItemInformation
 
         public int? WarehouseID { get; set; }
 
-        public string PhotoFileName { get; set; }
+        public string? PhotoFileName { get; set; }
 
         [MaxLength(255, ErrorMessage = "El código de barras 2 no puede exceder 255 caracteres")]
         public string? Barcode2 { get; set; }
