@@ -193,11 +193,16 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
             #region ItemGroup
             modelBuilder.Entity<ItemGroupEntity>(entity =>
             {
-                entity.ToTable("itemgruop");
+                entity.ToTable("itemgroup"); 
 
-                entity.HasKey(e => e.GroupId)
-                    .HasName("GroupId");
-            }); 
+                entity.HasKey(e => e.GROUP_ID);
+
+                entity.Property(e => e.GROUP_ID)
+                    .HasColumnName("GROUP_ID");
+
+                entity.Property(e => e.GROUP_NAME)
+                    .HasColumnName("GROUP_NAME");
+            });
             #endregion
 
         }

@@ -2,7 +2,7 @@
 {
     public class ItemGruopDto
     {
-        public int GroupId { get; set; }
-        public string GroupName { get; set; }
+        public int GROUP_ID { get; set; }
+        public string GROUP_NAME { get; set; }
     }
 }
