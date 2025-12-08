@@ -12,6 +12,8 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
         public DbSet<UserEntity> Users { get; set; } = null!;
         public DbSet<VatEntity> Vats { get; set; } = null!;
         public DbSet<ItemGroupEntity> ItemGroups { get; set; } = null!;
+        public DbSet<WareHouseEntity> WareHouses { get; set; } = null!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -200,6 +202,21 @@ namespace WebApiSIA.Infrastructure.Persistence.Contexts
 
                 entity.Property(e => e.GROUP_NAME)
                     .HasColumnName("GROUP_NAME");
+            });
+            #endregion
+
+            #region WareHouseEntity
+            modelBuilder.Entity<WareHouseEntity>(entity =>
+            {
+                entity.ToTable("warehouse");
+
+                entity.HasKey(e => e.WarehouseID);
+
+                entity.Property(e => e.WarehouseID)
+                    .HasColumnName("WarehouseID");
+
+                entity.Property(e => e.WarehouseAddress)
+                    .HasColumnName("WarehouseAddress");
             });
             #endregion
 

@@ -4,6 +4,7 @@ using WebApiSIA.Core.Application.Dtos.ItemGruop;
 using WebApiSIA.Core.Application.Dtos.ItemInformation;
 using WebApiSIA.Core.Application.Dtos.User;
 using WebApiSIA.Core.Application.Dtos.Vat;
+using WebApiSIA.Core.Application.Dtos.WareHouse;
 using WebApiSIA.Core.Domain.Entities;
 
 namespace WebApiSIA.Core.Application.Mappings
@@ -35,6 +36,8 @@ namespace WebApiSIA.Core.Application.Mappings
             //ItemGroupEntity
             CreateMap<ItemGroupEntity, ItemGruopDto>();
 
+            //WareHouseEntity
+            CreateMap<WareHouseEntity, WareHouseDto>();
 
             //VatEntity
             CreateMap<VatEntity, VatDto>();

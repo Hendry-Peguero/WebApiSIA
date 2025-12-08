@@ -2,7 +2,7 @@
 
 namespace WebApiSIA.Core.Application.Interfaces.Repositories
 {
-    public interface IVatRespository : IGenericRepository<VatEntity>
+    public interface IWareHouseRepository : IGenericRepository<WareHouseEntity>
     {
     }
 }
