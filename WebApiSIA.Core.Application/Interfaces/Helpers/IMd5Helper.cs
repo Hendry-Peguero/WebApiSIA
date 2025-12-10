@@ -1,5 +1,4 @@
-﻿
-namespace WebApiSIA.Core.Application.Interfaces.Helpers
+﻿namespace WebApiSIA.Core.Application.Interfaces.Helpers
 {
     public interface IMd5Helper
     {

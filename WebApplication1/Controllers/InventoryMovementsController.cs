@@ -1,5 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Data.SqlClient;
+using WebApiSIA.Core.Application.Dtos;
 using WebApiSIA.Core.Application.Dtos.InventoryMovement;
+using WebApiSIA.Core.Application.Interfaces.Helpers;
 using WebApiSIA.Core.Application.Interfaces.Services;
 using WebApiSIA.Core.Domain.Entities;
 
@@ -14,12 +21,14 @@ namespace WebApiSIA.Controllers
             InventoryMovementDto,
             InventoryMovementEntity> _service;
 
-        public InventoryMovementsController(IGenericService<
-            SaveInventoryMovementDto,
-            InventoryMovementDto,
-            InventoryMovementEntity> service)
+        private readonly ISqlHelper _sqlHelper;
+
+        public InventoryMovementsController(
+            IGenericService<SaveInventoryMovementDto, InventoryMovementDto, InventoryMovementEntity> service,
+            ISqlHelper sqlHelper)
         {
             _service = service;
+            _sqlHelper = sqlHelper;
         }
 
         // GET ALL
@@ -60,28 +69,46 @@ namespace WebApiSIA.Controllers
             }
         }
 
-        // CREATE
-        [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        public async Task<ActionResult<InventoryMovementDto>> Create([FromBody] SaveInventoryMovementDto dto)
+        // CREATE / AJUSTE DE INVENTARIO
+        [HttpPost("adjust-inventory")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult AdjustInventory([FromBody] AdjustInventoryRequestDto request)
         {
             try
             {
-                if (!ModelState.IsValid)
-                    return BadRequest(ModelState);
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@ITEM_ID",       request.ITEM_ID },
+                    { "@Movement_Type", request.Movement_Type },
+                    { "@Quantity",      request.Quantity },
+                    { "@WarehouseID",   request.WarehouseID },
+                    { "@SHELF_ID",      request.SHELF_ID },
+                    { "@CreatedBy",     request.CreatedBy },
+                    { "@Reason",        request.Reason }
+                };
 
-                var created = await _service.CreateAsync(dto);
+                _sqlHelper.ExecuteSQLStoredProcedure("sp_AdjustInventory", parameters);
 
-                return CreatedAtAction(
-                    nameof(GetById),
-                    new { id = created.Movement_ID },
-                    created
-                );
+                return Ok(new
+                {
+                    message = "Inventario ajustado correctamente."
+                });
+            }
+            catch (SqlException ex)
+            {
+                return BadRequest(new
+                {
+                    error = ex.Message
+                });
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    new { message = "Error al crear el movimiento", error = ex.Message });
+                return StatusCode(500, new
+                {
+                    error = ex.Message
+                });
             }
         }
 

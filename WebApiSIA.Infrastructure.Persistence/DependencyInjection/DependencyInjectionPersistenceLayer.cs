@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebApiSIA.Core.Application.Interfaces.Helpers;
 using WebApiSIA.Core.Application.Interfaces.Repositories;
 using WebApiSIA.Infrastructure.Persistence.Contexts;
+using WebApiSIA.Infrastructure.Persistence.Helpers;
 using WebApiSIA.Infrastructure.Persistence.Repositories;
 
 namespace WebApiSIA.Infrastructure.Persistence.DependencyInjection
@@ -33,6 +35,9 @@ namespace WebApiSIA.Infrastructure.Persistence.DependencyInjection
             services.AddTransient<IWareHouseRepository, WareHouseRepository>();
             #endregion
 
+            #region Helpers
+            services.AddTransient<ISqlHelper, SqlHelper>();
+            #endregion
         }
     }
 }
