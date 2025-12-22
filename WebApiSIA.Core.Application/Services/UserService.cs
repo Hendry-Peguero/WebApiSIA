@@ -14,21 +14,18 @@ namespace WebApiSIA.Core.Application.Services
 {
     public class UserService : GenericService<SaveUserDto, UserDto, UserEntity>, IUserService
     {
-        private readonly IConfiguration _config;
         private readonly IUserRepository _userRepository;
         private readonly IMd5Helper _md5Helper;
 
         public UserService(
             IUserRepository userRepository,
             IMapper mapper,
-            IMd5Helper md5Helper,
-            IConfiguration config
+            IMd5Helper md5Helper
         )
         : base(userRepository, mapper)
         {
             _userRepository = userRepository;
             _md5Helper = md5Helper;
-            _config = config;
         }
 
         public async Task<LoginResponseDto?> LoginAsync(string userName, string password)
@@ -58,8 +55,17 @@ namespace WebApiSIA.Core.Application.Services
 
         private string GenerateJwtToken(UserEntity user)
         {
+            var keyValue = Environment.GetEnvironmentVariable("JWT_KEY")
+                ?? throw new Exception("JWT_KEY no está configurado");
+
+            var issuer = Environment.GetEnvironmentVariable("JWT_ISSUER");
+            var audience = Environment.GetEnvironmentVariable("JWT_AUDIENCE");
+            var expireMinutes = int.Parse(
+                Environment.GetEnvironmentVariable("JWT_EXPIRE_MINUTES") ?? "60"
+            );
+
             var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(_config["Jwt:Key"]!)
+                Encoding.UTF8.GetBytes(keyValue)
             );
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -72,16 +78,15 @@ namespace WebApiSIA.Core.Application.Services
             };
 
             var token = new JwtSecurityToken(
-                issuer: _config["Jwt:Issuer"],
-                audience: _config["Jwt:Audience"],
+                issuer: issuer,
+                audience: audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(
-                    int.Parse(_config["Jwt:ExpireMinutes"] ?? "60")
-                ),
+                expires: DateTime.UtcNow.AddMinutes(expireMinutes),
                 signingCredentials: creds
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
     }
 }

@@ -14,7 +14,8 @@ namespace WebApiSIA.Infrastructure.Persistence.DependencyInjection
         public static void AddPersistenceDependency(this IServiceCollection services, IConfiguration configuration)
         {
 
-            var connectionString = configuration.GetConnectionString("SqlServerConnection");
+            var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+
 
             services.AddDbContext<ApplicationContext>(
                 options => options.UseSqlServer(
