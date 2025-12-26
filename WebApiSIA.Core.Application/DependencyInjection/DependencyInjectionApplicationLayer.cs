@@ -19,6 +19,7 @@ namespace WebApiSIA.Core.Application.DependencyInjection
             services.AddTransient<IMd5Helper, Md5Helper>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IItemInformationService, ItemInformationService>();
+            services.AddTransient<IBarcodeService, BarcodeService>();
 
             //services.AddTransient<IJsonHelper, JsonHelper>();
         }

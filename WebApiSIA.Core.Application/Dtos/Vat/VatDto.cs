@@ -4,6 +4,6 @@
     {
         public int ID { get; set; }
         public string? Descripcion { get; set; }
-        public double? VAT { get; set; }
+        public decimal? VAT { get; set; }
     }
 }
